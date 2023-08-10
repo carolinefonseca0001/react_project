@@ -1,5 +1,6 @@
 import { Component } from "react";
 import "./App.css";
+import FilmsList from "./filmsList";
 
 class App extends Component {
   constructor(props) {
@@ -33,9 +34,11 @@ class App extends Component {
         </form>
         <ul>
           {this.state.list.map((item, idx) => {
-            return <li key={item + idx}>{item}</li>;
+            return <li key={idx}>{item}</li>;
           })}
         </ul>
+        {/* <p>{FilmsList}</p> */}
+        <FilmsList />
       </div>
     );
   }
